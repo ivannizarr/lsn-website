@@ -59,7 +59,7 @@ export default function Home() {
       {/* SLIDER AREA */}
       <div className="relative overflow-hidden">
         <div
-          className="flex h-full transition-transform duration-700 ease-in-out"
+          className="flex h-full transition-transform duration-700 ease-in-out will-change-transform"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {slides.map((slide, idx) => (
@@ -77,7 +77,7 @@ export default function Home() {
                 <p className="text-lg sm:text-lg mb-3 font-montserrat leading-[1.3  ] drop-shadow-md">
                   {slide.description}
                 </p>
-                <button className="border border-white text-white font-montserrat px-6 py-1 rounded-lg hover:bg-[#02517A] transition">
+                <button className="border border-white text-white font-montserrat px-6 py-1 rounded-lg hover:bg-[#02517A] cursor-pointer transition">
                   {slide.button}
                 </button>
               </div>
@@ -86,12 +86,12 @@ export default function Home() {
         </div>
 
         {/* DOTS */}
-        <div className="absolute bottom-6 w-full flex justify-center gap-2 z-20">
+        <div className="absolute bottom-16 w-full flex justify-center gap-2 z-20">
           {slides.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setActiveIndex(idx)}
-              className={`w-5.5 h-5.5 rounded-full transition-all border-3 ${
+              className={`w-5.5 h-5.5 rounded-full cursor-pointer transition-all border-3 ${
                 activeIndex === idx
                   ? "bg-[#02517A] border-white"
                   : "bg-white border-white"
@@ -100,7 +100,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
       {/* FOOTER */}
       <Footer />
     </div>

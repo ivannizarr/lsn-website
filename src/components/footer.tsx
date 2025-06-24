@@ -6,9 +6,9 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#02517A] text-white text-sm font-light flex items-center justify-center py-3">
+    <footer className="fixed bottom-0 z-40 w-full bg-[#02517A] text-white text-sm font-light flex items-center justify-center py-3 backdrop-blur-sm">
       {/* Teks footer */}
-      <span>©{currentYear} Loka Spasial Nusantara. All rights reserved.</span>
+      <span>©{currentYear} Loka Spasial Nusantara - All rights reserved.</span>
 
       {/* WhatsApp Icon di pojok kanan bawah */}
       <Link
