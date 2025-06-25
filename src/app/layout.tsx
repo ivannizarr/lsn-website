@@ -9,7 +9,7 @@ const nunito = Nunito({
   weight: ["400", "600", "700"],
 });
 
-// Metadata untuk SEO
+// Metadata SEO
 export const metadata: Metadata = {
   title: {
     default: "Loka Spasial Nusantara",

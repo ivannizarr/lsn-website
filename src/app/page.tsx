@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Slide from "@/components/slide";
+import Dots from "@/components/dots";
 
 const slides = [
   {
@@ -53,54 +55,27 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-screen w-screen grid grid-rows-[1fr_auto] overflow-hidden font-sans">
-      {/* HEADER */}
+    <div className="flex flex-col min-h-screen w-full overflow-hidden font-sans">
       <Header />
-      {/* SLIDER AREA */}
-      <div className="relative overflow-hidden">
+
+      {/* Slider Section */}
+      <main className="flex-1 relative overflow-hidden">
         <div
           className="flex h-full transition-transform duration-700 ease-in-out will-change-transform"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {slides.map((slide, idx) => (
-            <div
-              key={idx}
-              className="min-w-full h-full bg-cover bg-center relative flex items-center justify-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
-              <div className="absolute inset-0 bg-black/50" />
-
-              <div className="relative z-10 text-center text-white text-sm px-4 max-w-3xl bg-gray-950/50 py-4 rounded-2xl">
-                <h1 className="text-yellow-400 font-montserrat font-bold text-3xl sm:text-4xl md:text-3xl leading-tight tracking-tight mb-2">
-                  {slide.title}
-                </h1>
-                <p className="text-lg sm:text-lg mb-3 font-montserrat leading-[1.3  ] drop-shadow-md">
-                  {slide.description}
-                </p>
-                <button className="border border-white text-white font-montserrat px-6 py-1 rounded-lg hover:bg-[#02517A] cursor-pointer transition">
-                  {slide.button}
-                </button>
-              </div>
-            </div>
+            <Slide key={idx} slide={slide} />
           ))}
         </div>
 
-        {/* DOTS */}
-        <div className="absolute bottom-16 w-full flex justify-center gap-2 z-20">
-          {slides.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setActiveIndex(idx)}
-              className={`w-5.5 h-5.5 rounded-full cursor-pointer transition-all border-3 ${
-                activeIndex === idx
-                  ? "bg-[#02517A] border-white"
-                  : "bg-white border-white"
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-      {/* FOOTER */}
+        <Dots
+          slides={slides}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        />
+      </main>
+
       <Footer />
     </div>
   );
