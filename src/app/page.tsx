@@ -50,7 +50,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 7000); // autoplay tiap 7 detik
     return () => clearInterval(timer);
   }, []);
 
@@ -59,16 +59,19 @@ export default function Home() {
       <Header />
 
       {/* Slider Section */}
-      <main className="flex-1 relative overflow-hidden">
+      <main className="flex-1 relative overflow-hidden h-screen">
         <div
-          className="flex h-full transition-transform duration-700 ease-in-out will-change-transform"
+          className="flex h-full transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {slides.map((slide, idx) => (
-            <Slide key={idx} slide={slide} />
+            <div key={idx} className="min-w-full h-full">
+              <Slide slide={slide} />
+            </div>
           ))}
         </div>
 
+        {/* Dots Pagination */}
         <Dots
           slides={slides}
           activeIndex={activeIndex}

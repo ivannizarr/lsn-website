@@ -19,11 +19,16 @@
   }
 }
 
-/* Global styling */
-body {
+/* Reset dasar dan anti-scroll vertikal */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Cegah scroll vertikal */
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans); /* default: Nunito */
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
 }
 
 /* Optional: heading pakai Montserrat */
@@ -33,5 +38,5 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Optional: code block pakai monospace */
 code, pre {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, monospace);
 }
