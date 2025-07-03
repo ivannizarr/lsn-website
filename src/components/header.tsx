@@ -84,7 +84,7 @@ const Header: React.FC = () => {
       <div className="relative max-w-[1440px] mx-auto h-20 xl:h-24 px-4 sm:px-6 xl:px-8 flex items-center justify-between z-[60]">
         <Link href="/" className="flex items-center z-[70] relative select-none">
           <Image
-            src="/logo_LSN_white.png"
+            src="/logo-white.png"
             alt="Logo"
             width={300}
             height={100}
