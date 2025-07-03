@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 
-// Font Google: Nunito
 const nunito = Nunito({
   subsets: ["latin"],
   variable: "--font-nunito",
@@ -18,6 +17,9 @@ export const metadata: Metadata = {
   },
   description: "Solusi inovatif untuk pengelolaan berkelanjutan.",
   metadataBase: new URL("https://lokaspasial.com"),
+  icons: {
+    icon: [{ url: "/logo-clear.png", type: "image/png", sizes: "32x32" }],
+  },
 };
 
 export const viewport: Viewport = {
@@ -32,14 +34,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className="scroll-smooth">
-      <head>
-        <link
-          rel="icon"
-          href="/logo-clear.png"
-          type="image/png"
-          sizes="32x32"
-        />
-      </head>
       <body
         className={`${nunito.variable} font-sans antialiased bg-black text-white`}
       >

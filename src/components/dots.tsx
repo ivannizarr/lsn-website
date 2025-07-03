@@ -11,7 +11,7 @@ interface DotsProps {
 
 const Dots = ({ slides, activeIndex, setActiveIndex }: DotsProps) => {
   return (
-    <div className="absolute bottom-19 sm:bottom-14 w-full flex justify-center items-center gap-1 sm:gap-2 z-30">
+    <div className="absolute bottom-20 sm:bottom-14 w-full flex justify-center items-center gap-1 sm:gap-2 z-30">
       {slides.map((_, idx) => (
         <button
           key={idx}

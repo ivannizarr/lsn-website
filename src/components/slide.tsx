@@ -21,7 +21,7 @@ const Slide = ({ slide }: SlideProps) => {
 
       {/* Konten utama slide */}
       <div className="relative z-10 text-center text-white px-4 py-3 max-w-3xl bg-gray-950/50 rounded-2xl mx-2">
-        <h1 className="text-yellow-400 font-montserrat font-bold text-2xl sm:text-3xl md:text-3xl mb-1 leading-tight tracking-tight">
+        <h1 className="text-yellow-400 font-montserrat font-bold text-xl sm:text-3xl md:text-3xl mb-1 leading-tight tracking-tight">
           {slide.title}
         </h1>
         <p className="text-sm sm:text-base md:text-lg mb-2 font-montserrat leading-snug drop-shadow-md">
