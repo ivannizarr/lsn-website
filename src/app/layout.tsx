@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Solusi inovatif untuk pengelolaan berkelanjutan.",
   metadataBase: new URL("https://lokaspasial.com"),
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ url: "/logo-clear.png", type: "image/png" }],
   },
 };
 
