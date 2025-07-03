@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Loka Spasial Nusantara",
   },
   description: "Solusi inovatif untuk pengelolaan berkelanjutan.",
-  metadataBase: new URL("https://lokaspatial.com"),
+  metadataBase: new URL("https://lokaspasial.com"),
   icons: {
     icon: "/favicon.ico",
   },

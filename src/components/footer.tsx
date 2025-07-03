@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     <footer className="fixed bottom-0 z-40 w-full bg-[#02517A] text-white text-xs sm:text-sm font-light flex items-center justify-center py-2 px-4 backdrop-blur-sm">
       {/* Teks footer */}
       <span className="text-center">
-        ©{currentYear} Loka Spasial Nusantara - All rights reserved.
+        ©{currentYear} Loka Spasial Nusantara. All Rights Reserved.
       </span>
 
       {/* WhatsApp Icon */}
